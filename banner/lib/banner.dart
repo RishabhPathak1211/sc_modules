@@ -1,7 +1,5 @@
 library banner;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'models/banner_ui.dart';
+export 'services/banner_service.dart';
+export 'banner_bootstrap.dart';
