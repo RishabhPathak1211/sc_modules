@@ -4,10 +4,10 @@ import 'package:banner/repositories/banner_repository_factory.dart';
 import 'package:salescode_sdk/salescode_sdk.dart';
 
 class BannerService extends Service<BannerUI> {
-  late BannerRepository bannerRepository;
+  late BannerRepository _bannerRepository;
 
   BannerService() {
-    bannerRepository = BannerRepositoryFactory().getRepository();
+    _bannerRepository = BannerRepositoryFactory().getRepository();
   }
 
   @override
@@ -15,12 +15,12 @@ class BannerService extends Service<BannerUI> {
 
   @override
   Future<void> addAll(List<BannerUI> data) async {
-    await bannerRepository.addAll(data);
+    await _bannerRepository.addAll(data);
   }
 
   @override
   List<BannerUI> getAll() {
-    return bannerRepository.getAll();
+    return _bannerRepository.getAll();
   }
 
   @override
